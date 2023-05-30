@@ -1,0 +1,153 @@
+.messageboard-page {
+    height: 100vh;
+    display: flex;
+    .messageboard__sidebar {
+        display: flex;
+        flex-direction: column;
+        width: 30%;
+        height: 100%;
+        // height: 100vh;
+        border-right: 1px solid #F3F3F3;
+        padding: 25px;
+        .sidebar__header {
+            padding-top: 15px;
+            padding-bottom: 25px;
+            h1 {
+                font-size: 36px;
+                font-weight: 500;
+            }
+        }
+        .sidebar__cotent {
+            // height: 70%;
+            h2 {
+                font-size: 18px;
+                font-weight: 500;
+            }
+            .sidebar__userlist {
+                list-style: none;
+                padding: 0;
+                .siderbar__userlist-item {
+                    display: flex;
+                    align-items: center;
+                    padding: 15px 0;
+                    .userlist__initials {
+                        margin-right: 15px;
+                    }
+                }
+            }
+
+        }
+        .sidebar__footer {
+            margin-top: auto;
+            // display: flex;
+            // align-items: center;
+            img {
+                margin-right: 15px;
+            }
+        }
+    }
+    .messageboard__mainfeed {
+        display: flex;
+        flex-direction: column;
+        width: 70%;
+        .mainfeed__header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 30px;
+            .mainfeed__header-currentuser {
+                display: flex;
+                align-items: center;
+                .currentuser__initials {
+                    margin-right: 15px;
+                }
+                .currentuser__name {
+                    font-size: 18px;
+                    font-weight: 600;
+
+                }
+            }
+            .mainfeed__header-filters {
+                padding: 5px;
+                background: #F9F9F9;
+                border-radius: 5px;
+                .filter-btn {
+                    padding: 5px 20px;
+                    margin: 5px;
+                    border-radius: 5px;
+                    background: none;
+                }
+                .filter-btn--active {
+                    background: #6D42D8;
+                    color: white;
+                }
+
+            }
+
+        }
+        .mainfeed__content {
+            height: -webkit-fill-available;
+            overflow-y: auto;
+            background: #F8F8F9;
+            padding: 15px;
+            display: flex;
+            flex-direction: column-reverse;
+            .message-timestamp {
+                color: #869AA9;
+                font-size: 12px;
+            }
+            .mainfeed__message-wrapper {
+                margin-bottom: 20px;
+                .currentusermessage__wrapper {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: end;
+
+                    .mainfeed__currentusermessage {
+                        padding: 15px;
+                        background: #6D42D8;
+                        color: white;
+                        border-radius: 5px;
+                        margin: 5px 0;
+                        display: inline-block;
+                    }
+                }
+            }
+            .mainfeed__otherusermessage {
+                padding: 15px;
+                background: #FBFBFD;
+                border: 1px solid #E5EBEF;
+                display: inline-block;
+                border-radius: 5px;
+                margin-bottom: 5px;
+            }
+        }
+        .mainfeed__footer {
+            margin-top: auto;
+            padding: 10px;
+            display: flex;
+
+            // background: #ffffff;
+            .message__input-form {
+                width: 100%;
+
+                .mainfeed__message-input {
+                    width: 90%;
+                    padding: 10px;
+                    border: none;
+                    &:focus-visible {
+                        border: none;
+                    }
+                }
+                .mainfeed__message-send {
+                    border-radius: 50%;
+                    height: 40px;
+                    width: 40px;
+                    background: #6D42D8;
+                }
+            }
+
+        }
+
+    }
+}
